@@ -473,3 +473,9 @@ img.wp-smiley, img.emoji {
                                         padding-left: 52px !important;
                                         
                                     }
+                                    .footer-widget-area a {
+                                        color: #FFF !important;
+                                    }
+                                    .footer-widget-area a:hover {
+                                        text-decoration: underline !important;
+                                    }
