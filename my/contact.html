@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Globalizations Partners</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Ensure the body and html take up the full height of the viewport */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Flexbox layout to push the footer to the bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Main content area should grow to take up available space */
+    main {
+      flex: 1;
+    }
+
+    /* Footer styling */
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header with Navigation -->
+  <header class="bg-green-600 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div>
+        <img src="files/logo.png" alt="Logo" class="h-14">
+      </div>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-green-200">Home</a>
+        <a href="about.html" class="hover:text-green-200">About Us</a>
+        <a href="contact.html" class="hover:text-green-200">Contact Us</a>
+        <a href="terms.html" class="hover:text-green-200">Terms and Conditions</a>
+        <a href="privacy.html" class="hover:text-green-200">Privacy Policy</a>
+      </nav>
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden">
+        <button id="hamburger-btn" class="hover:text-green-200">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Navigation (Hidden by default) -->
+    <div id="mobile-nav" class="md:hidden hidden bg-green-600">
+      <nav class="flex flex-col items-center space-y-4 py-4 shadow-md">
+        <a href="index.html" class="hover:text-green-200">Home</a>
+        <a href="about.html" class="hover:text-green-200">About Us</a>
+        <a href="contact.html" class="hover:text-green-200">Contact Us</a>
+        <a href="terms.html" class="hover:text-green-200">Terms and Conditions</a>
+        <a href="privacy.html" class="hover:text-green-200">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto py-12 px-6">
+    <!-- Hero Section -->
+    <section class="text-center mb-12">
+      <h1 class="text-4xl font-extrabold text-gray-900">Contact Us</h1>
+      <p class="mt-4 text-xl text-gray-600">We'd love to hear from you. Please fill out the form below and we'll get in touch.</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <form id="form" class="space-y-6">
+        <div>
+          <label for="name" class="block text-gray-700 font-semibold mb-2">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+        <div>
+          <label for="email" class="block text-gray-700 font-semibold mb-2">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+        <div>
+          <label for="subject" class="block text-gray-700 font-semibold mb-2">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" class="w-full border border-gray-300 p-3 rounded-lg" required>
+        </div>
+        <div>
+          <label for="message" class="block text-gray-700 font-semibold mb-2">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" class="w-full border border-gray-300 p-3 rounded-lg" required></textarea>
+        </div>
+        <div>
+          <button type="submit" class="w-full bg-green-500 text-white font-semibold py-3 rounded-lg hover:bg-green-600 transition duration-200">Send Message</button>
+        </div>
+      </form>
+      <script>
+        document.getElementById("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+      
+            document.getElementById("form").innerHTML = '<img src="files/loading.gif" style="" width="80">';
+      
+            setTimeout(() => {
+                document.getElementById("form").innerHTML = '<p style="font-size: 24px; color:black; font-weight: 700;">Thank you your request. A representative will contact you shortly.</p>';
+            }, 2000);
+        });
+      </script>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-green-600 text-white py-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <p>
+        Company number 00943935 <br>
+        Address: Lime St, London EC3M 7HR, UK <br>
+        Phone number: 01632 960189  <br> <br>
+      </p>
+      <p>&copy; 2025 Globalizations Partners. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle mobile navigation
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+      const mobileNav = document.getElementById('mobile-nav');
+      mobileNav.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
+</html>
