@@ -6,6 +6,29 @@
   <title>Contact Us | {Company}</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="files/logo.png" sizes="16x16">
+  <style>
+    /* Ensure the body and html take up the full height of the viewport */
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    /* Flexbox layout to push the footer to the bottom */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Main content area should grow to take up available space */
+    main {
+      flex: 1;
+    }
+
+    /* Footer styling */
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
