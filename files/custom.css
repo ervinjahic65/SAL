@@ -479,3 +479,6 @@ img.wp-smiley, img.emoji {
                                     .footer-widget-area a:hover {
                                         text-decoration: underline !important;
                                     }
+                                    .iti--separate-dial-code input[type=tel] {
+                                        padding-left: 10px !important;
+                                    }
