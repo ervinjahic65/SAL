@@ -469,3 +469,7 @@ img.wp-smiley, img.emoji {
                                     .iti.iti--allow-dropdown.iti--show-flags{
                                         width:100%;
                                     }
+                                    .wpcf7-phonetext{
+                                        padding-left: 52px !important;
+                                        
+                                    }
